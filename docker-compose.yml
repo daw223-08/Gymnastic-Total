@@ -1,0 +1,51 @@
+version: "3.7"
+services:
+  web:
+    build: .
+    restart: always
+    ports:     
+      - "80:80"
+    links:
+      - db
+    depends_on:
+      - db
+    networks:
+      gymnastic:
+        ipv4_address: 172.24.0.2
+    volumes:
+      - /root/proyecto/gymnastic:/var/www/html
+  db:
+    image: mysql:8.0.32
+    restart: always
+    command: --default-authentication-plugin=mysql_native_password
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: gymnastic
+      MYSQL_USER: gymnastic
+      MYSQL_PASSWORD: gymnastic
+    networks:
+      gymnastic:
+        ipv4_address: 172.24.0.4
+    volumes:
+      - /root/proyecto/bbdd:/var/lib/mysql
+  phpmyadmin:
+    image: phpmyadmin:5.2.1-apache
+    restart: always
+    links:
+      - db
+    depends_on:
+      - db
+    ports:
+      - "8081:80"
+    environment:
+      PMA_HOST: db
+    networks:
+      gymnastic:
+        ipv4_address: 172.24.0.3
+networks:
+  gymnastic:
+    ipam:
+      config:       
+        - subnet: 172.24.0.0/24

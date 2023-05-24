@@ -1,0 +1,127 @@
+<body>
+    <nav class="col-md-3 d-none d-md-block bg-light sidebar">
+        <div class="bg-dark border-right borde-redondo" id="sidebar-wrapper">
+            <div class="sidebar-heading text-center text-light bg-primary py-4 borde-redondo fondo-verde-oscuro">NAVEGA
+                POR LA WEB</div>
+            <div class="list-group list-group-flush">
+                <a routerLink="/" class="list-group-item list-group-item-action bg-dark text-light">
+                    <i class="fas fa-home mr-2"></i>Inicio
+                </a>
+                <a routerLink="/perfil" class="list-group-item list-group-item-action bg-dark text-light">
+                    <i class="fas fa-user mr-2"></i>Perfil
+                </a>
+                <a routerLink="/dietas-predisenadas" class="list-group-item list-group-item-action bg-dark text-light">
+                    <i class="fas fa-book mr-2"></i>Ver Dietas Prediseñadas
+                </a>
+                <a routerLink="/crear-dietas" class="list-group-item list-group-item-action bg-dark text-light">
+                    <i class="fas fa-utensils mr-2"></i>Crear Dietas
+                </a>
+                <a routerLink="/informacionn-adicional"
+                    class="list-group-item list-group-item-action bg-dark text-light">
+                    <i class="fas fa-info-circle mr-2"></i>Consultar información adicional
+                </a>
+                <a routerLink="/mis-dietas" class="list-group-item list-group-item-action bg-dark text-light">
+                    <i class="fas fa-chart-bar mr-2"></i>Mis Dietas
+                </a>
+                <a routerLink="/gestor-alimentos" class="list-group-item list-group-item-action bg-dark text-light">
+                    <i class="fas fa-apple-alt mr-2"></i>Gestionar alimentos
+                </a>
+                <a (click)="cerrarSesion()" class="list-group-item list-group-item-action bg-dark text-light">
+                    <i class="fas fa-sign-out-alt mr-2"></i>Cerrar sesión
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="p-5">
+        <div class="row">
+            <div class="card">
+                <div class="card-body">
+                    <h1 class="mt-5 centro">Información útil</h1>
+                    <hr class="separador">
+                    <div class="row mt-4">
+                        <div class="col-lg-8 offset-lg-2">
+                            <h2>Introducción</h2>
+                            <p>
+                                Las dietas desempeñan un papel vital en nuestra salud y bienestar general. Al seguir una
+                                dieta equilibrada y
+                                saludable, podemos obtener todos los nutrientes esenciales que nuestro cuerpo necesita,
+                                fortalecer nuestro
+                                sistema inmunológico y reducir el riesgo de enfermedades crónicas.
+                            </p>
+                            <br><br>
+                            <h2>Importancia de las dietas</h2>
+                            <p>
+                                Una alimentación adecuada proporciona los elementos necesarios para el crecimiento y
+                                desarrollo del organismo,
+                                así como para el correcto funcionamiento de sus diferentes sistemas y procesos. Los
+                                nutrientes que obtenemos
+                                de los alimentos son esenciales para el mantenimiento de nuestra salud y vitalidad.
+                            </p>
+                            <br>
+                            <div><img src="assets/img/ensalada.jpg" width="500px"><br><br></div>
+                            <h3>Beneficios de seguir una dieta saludable</h3>
+                            <ul>
+                                <li>Obtención de los nutrientes necesarios.</li>
+                                <li>Fortalecimiento del sistema inmunológico.</li>
+                                <li>Prevención de enfermedades crónicas.</li>
+                                <li>Mantenimiento de un peso saludable.</li>
+                                <li>Aumento de la energía y vitalidad.</li>
+                            </ul>
+                            <br><br>
+                            <h2>¿Por qué hacer una dieta?</h2>
+                            <p>
+                                Hacer una dieta no se trata solo de perder peso, sino de adoptar hábitos alimenticios
+                                saludables que nos
+                                beneficien a largo plazo. Una dieta equilibrada nos proporciona la energía y los
+                                nutrientes necesarios para
+                                llevar una vida activa y plena.
+                            </p>
+                            <br>
+                            <div><img src="assets/img/cafe.jpg" width="500px"><br><br></div>
+                            <h3>Conclusión</h3>
+                            <p>
+                                Las dietas desempeñan un papel vital en nuestra salud y bienestar general. Al seguir una
+                                dieta equilibrada y
+                                saludable, podemos obtener todos los nutrientes esenciales que nuestro cuerpo necesita,
+                                fortalecer nuestro
+                                sistema inmunológico y reducir el riesgo de enfermedades crónicas.
+                            </p>
+                            <p>
+                                Es importante recordar que cada persona es única y tiene diferentes necesidades
+                                nutricionales. Consultar con
+                                un profesional de la salud, como un dietista o nutricionista, puede ayudarnos a diseñar
+                                un plan de alimentación
+                                personalizado y adaptado a nuestras necesidades específicas.
+                            </p>
+                            <p>
+                                Además, es fundamental adoptar una mentalidad positiva y consciente hacia la
+                                alimentación. No se trata solo de
+                                seguir restricciones estrictas, sino de disfrutar de una amplia variedad de alimentos
+                                saludables y permitirnos
+                                indulgencias ocasionales de manera equilibrada.
+                            </p>
+                            <p>
+                                En resumen, una dieta adecuada es clave para mantener una vida saludable y prevenir
+                                enfermedades. Al hacer elecciones conscientes y nutritivas en nuestra alimentación
+                                diaria, podemos experimentar los beneficios a largo plazo y mejorar nuestra calidad de
+                                vida en general. ¡Recuerda que la comida es nuestra fuente de energía y nutrición, así
+                                que elijamos sabiamente y cuidemos de nuestro cuerpo y mente!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!--<footer class="bg-secondary text-center text-lg-start text-white">
+        <div class="container p-4">
+            <div class="row">
+                <div class="col-lg-12">
+                    <p class="m-0">© 2023 - Desarrollado por Mario Paredes Vela</p>
+                </div>
+            </div>
+        </div>
+    </footer>-->
+</body>

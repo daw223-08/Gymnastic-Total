@@ -1,0 +1,111 @@
+<body>
+    <nav class="col-md-3 d-none d-md-block bg-light sidebar">
+        <div class="bg-dark border-right borde-redondo" id="sidebar-wrapper">
+            <div class="sidebar-heading text-center text-light bg-primary py-4 borde-redondo fondo-verde-oscuro">NAVEGA
+                POR LA WEB</div>
+            <div class="list-group list-group-flush">
+                <a routerLink="/" class="list-group-item list-group-item-action bg-dark text-light">
+                    <i class="fas fa-home mr-2"></i>Inicio
+                </a>
+                <a routerLink="/perfil" class="list-group-item list-group-item-action bg-dark text-light">
+                    <i class="fas fa-user mr-2"></i>Perfil
+                </a>
+                <a routerLink="/dietas-predisenadas" class="list-group-item list-group-item-action bg-dark text-light">
+                    <i class="fas fa-book mr-2"></i>Ver Dietas Prediseñadas
+                </a>
+                <a routerLink="/crear-dietas" class="list-group-item list-group-item-action bg-dark text-light">
+                    <i class="fas fa-utensils mr-2"></i>Crear Dietas
+                </a>
+                <a routerLink="/informacion-adicional"
+                    class="list-group-item list-group-item-action bg-dark text-light">
+                    <i class="fas fa-info-circle mr-2"></i>Consultar información adicional
+                </a>
+                <a routerLink="/mis-dietas" class="list-group-item list-group-item-action bg-dark text-light">
+                    <i class="fas fa-chart-bar mr-2"></i>Mis Dietas
+                </a>
+                <a routerLink="/gestor-alimentos" class="list-group-item list-group-item-action bg-dark text-light">
+                    <i class="fas fa-apple-alt mr-2"></i>Gestionar alimentos
+                </a>
+                <a (click)="cerrarSesion()" class="list-group-item list-group-item-action bg-dark text-light">
+                    <i class="fas fa-sign-out-alt mr-2"></i>Cerrar sesión
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="p-5">
+        <div class="row" *ngFor="let dieta of dietas">
+            <div class="card">
+                <div class="card-body">
+                    <div>
+                        <div class="mb-3">
+                            <div class="row">
+                                <div class="row mt-2">
+                                    <h1>Dieta <b>{{ dieta.nombre }}</b></h1>                              
+                                </div>
+                                <hr class="separador">
+                                <div class="row mt-4">                                
+                                      <div class="row">
+                                        <div class="col-md-6">
+                                            <h2>Descripción</h2>
+                                            <p>
+                                              {{dieta.descripcion}}
+                                            </p>
+                                          </div>
+                                        <div class="col-md-6">
+                                          <h2>Tipo</h2>
+                                          <p>
+                                            {{dieta.tipo}}
+                                          </p>
+                                        </div>                                    
+                                      </div>                                
+                                  </div>
+                                  <div *ngIf="dieta.alimentos" [ngStyle]="{ 'display': dieta.alimentos.length === 0 ? 'none' : 'table' }">
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>Nombre</th>
+                                                <th>Cantidad</th>
+                                                <th>Familia</th>
+                                                <th>Horario de Ingesta</th>
+                                                <th>Día</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr *ngFor="let alimento of dieta.alimentos | paginate: {itemsPerPage: 5, currentPage: page}">
+                                                <td>{{ alimento.nombre }}</td>
+                                                <td>{{ alimento.cantidad }}</td>
+                                                <td>{{ alimento.familia }}</td>
+                                                <td>{{ alimento.horario_ingesta }}</td>
+                                                <td>{{ alimento.dia }}</td>
+                                            </tr>
+                                            
+                                        </tbody>
+                                    </table>
+                                    <div class="centro">
+                                        <pagination-controls (pageChange)="page = $event" previousLabel="Anterior"
+                                            nextLabel="Siguiente"></pagination-controls>
+                                    </div>
+                                </div>
+                                <div class="centro" *ngIf="dieta.alimentos?.length == 0">
+                                    <hr class="separador">
+                                    <h4>Ups! Parece que no tienes alimentos en tu dieta, borrala para que no te moleste</h4>
+                                </div>
+                                
+                                <div class="col text-right mb-2">
+                                    <button class="btn btn-verde btn-sm mr-2" routerLink="/editar-dieta/{{dieta.id}}">
+                                        <i class="fas fa-edit"></i> Editar
+                                    </button>
+                                    <button class="btn btn-danger btn-sm" (click)="confirmarBorrado(dieta.id, dieta.nombre)">
+                                        <i class="fas fa-trash"></i> Borrar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr class="separador-verde">
+        </div>
+    </main>
+</body>

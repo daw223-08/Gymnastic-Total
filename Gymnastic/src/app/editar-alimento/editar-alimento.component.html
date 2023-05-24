@@ -1,0 +1,68 @@
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6 mt-4">
+                <div class="card mt-5">
+                    <div class="card-body">
+                        <div class="text-center mb-4">
+                            <h1>EDITAR ALIMENTO</h1>
+                        </div>
+                        <div>
+                            <div class="mb-3">
+                                <label for="nombre" class="form-label">Nombre</label>
+                                <input [(ngModel)]="alimento.nombre" type="text" class="form-control border-dark"
+                                    id="nombre">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="cantidad" class="form-label">Cantidad</label>
+                                <input [(ngModel)]="alimento.cantidad" type="email" class="form-control border-dark"
+                                    id="cantidad">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="familia" class="form-label">Familia</label>
+                                <input [(ngModel)]="alimento.familia" type="text" class="form-control border-dark"
+                                    id="familia">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="kcal" class="form-label">Kcal</label>
+                                <input [(ngModel)]="alimento.kcal" type="text" class="form-control border-dark" id="kcal">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="edad" class="form-label">Horario de ingesta</label>
+                                <select [(ngModel)]="alimento.horario_ingesta" class="form-select border-dark"
+                                    id="horario_ingesta">
+                                    <option value="Desayuno">Desayuno</option>
+                                    <option value="Almuerzo">Almuerzo</option>
+                                    <option value="Comida">Comida</option>
+                                    <option value="Merienda">Merienda</option>
+                                    <option value="Cena">Cena</option>
+                                </select>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="dia" class="form-label">Dia</label>
+                                <select [(ngModel)]="alimento.dia" class="form-select border-dark" id="dia">
+                                    <option value="Lunes">Lunes</option>
+                                    <option value="Martes">Martes</option>
+                                    <option value="Miercoles">Miercoles</option>
+                                    <option value="Jueves">Jueves</option>
+                                    <option value="Viernes">Viernes</option>
+                                    <option value="Sabado">Sabado</option>
+                                    <option value="Domingo">Domingo</option>
+                                </select>
+                            </div>
+                            <div class="d-grid gap-2 mt-4">
+                                <button (click)="actualizarAlimento()" class="btn btn-primary btn-verde">Editar</button>
+                                <button routerLink="/gestor-alimentos" class="btn btn-secondary btn-verde-oscuro">Volver</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

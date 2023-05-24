@@ -1,0 +1,41 @@
+
+body {
+    background-color: #98ff96;
+    height: 100vh;
+}
+
+html{
+    background-color: #000000!important;
+}
+
+.card {
+    border-radius: 10px;
+    border-color: black;
+    background-color: #ffffff;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.8);
+}
+
+.container{
+    background-color: #98ff96!important;
+    width: 100%!important;
+}
+
+.html{
+    background-color: #98ff96!important;
+}
+
+.btn-verde {
+    background-color: #009929;
+    color: white;
+    border: #009929;
+}
+
+.btn-verde:hover{
+    background-color: #5ccb5f;
+    color: white;
+}
+
+.btn-verde-oscuro {
+    background-color: #003400;
+    color: white;
+}

@@ -1,0 +1,136 @@
+<body>
+    <nav class="col-md-3 d-none d-md-block bg-light sidebar">
+        <div class="bg-dark border-right borde-redondo" id="sidebar-wrapper">
+            <div class="sidebar-heading text-center text-light bg-primary py-4 borde-redondo fondo-verde-oscuro">NAVEGA
+                POR LA WEB</div>
+            <div class="list-group list-group-flush">
+                <a routerLink="/" class="list-group-item list-group-item-action bg-dark text-light">
+                    <i class="fas fa-home mr-2"></i>Inicio
+                </a>
+                <a routerLink="/perfil" class="list-group-item list-group-item-action bg-dark text-light">
+                    <i class="fas fa-user mr-2"></i>Perfil
+                </a>
+                <a routerLink="/dietas-predisenadas" class="list-group-item list-group-item-action bg-dark text-light">
+                    <i class="fas fa-book mr-2"></i>Ver Dietas Prediseñadas
+                </a>
+                <a routerLink="/crear-dietas" class="list-group-item list-group-item-action bg-dark text-light">
+                    <i class="fas fa-utensils mr-2"></i>Crear Dietas
+                </a>
+                <a routerLink="/informacion-adicional"
+                    class="list-group-item list-group-item-action bg-dark text-light">
+                    <i class="fas fa-info-circle mr-2"></i>Consultar información adicional
+                </a>
+                <a routerLink="/mis-dietas" class="list-group-item list-group-item-action bg-dark text-light">
+                    <i class="fas fa-chart-bar mr-2"></i>Mis Dietas
+                </a>
+                <a routerLink="/gestor-alimentos" class="list-group-item list-group-item-action bg-dark text-light">
+                    <i class="fas fa-apple-alt mr-2"></i>Gestionar alimentos
+                </a>
+                <a (click)="cerrarSesion()" class="list-group-item list-group-item-action bg-dark text-light">
+                    <i class="fas fa-sign-out-alt mr-2"></i>Cerrar sesión
+                </a>
+            </div>
+        </div>
+    </nav>
+    <main class="p-5">
+        <div class="row">
+            <div class="card">
+                <div class="card-body">
+                    <div>
+                        <div class="mb-3">
+                            <div class="row mt-2">
+                                <h1>Tu perfil</h1>
+                            </div>
+                            <br>
+                            <div class="row">
+                                
+                                    <table class="table">
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">Nombre:</th>
+                                                <td>{{ usuario.name }}</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Email:</th>
+                                                <td>{{ usuario.email }}</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Telefono:</th>
+                                                <td>{{ usuario.telefono }}</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Sexo:</th>
+                                                <td>
+                                                    <span *ngIf="usuario.sexo === 'm'">Masculino</span>
+                                                    <span *ngIf="usuario.sexo === 'f'">Femenino</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Edad:</th>
+                                                <td>{{ usuario.edad }} años</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Peso:</th>
+                                                <td>{{ usuario.peso }} kg</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Altura:</th>
+                                                <td>{{ usuario.altura }} cm</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Índice de masa corporal:</th>
+                                                <td>{{ usuario.imc }}</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                
+
+                                <hr class="separador">
+
+                                <div class="row mt-2">
+                                    <h1>Condición física</h1>
+                                </div>
+                                <br>
+                                <div>
+                                    <br>
+                                    <span *ngIf="usuario.imc < 18.5">De acuerdo a tu índice de masa corporal, se observa
+                                        que tu peso se encuentra por debajo de los rangos considerados como normales. Te
+                                        recomendamos seguir una dieta especializada para incrementar tu peso de manera
+                                        saludable y mejorar tu bienestar general.</span>
+                                    <span *ngIf="usuario.imc >= 18.5 && usuario.imc <= 24.9">Según tu índice de masa
+                                        corporal, se determina que tu peso está dentro del rango considerado normal y
+                                        saludable. Felicitaciones por mantener una alimentación equilibrada y un estilo
+                                        de vida saludable, continúa así para asegurar tu bienestar a largo plazo.</span>
+                                    <span *ngIf="usuario.imc >= 25 && usuario.imc <= 29.9">Según tu índice de masa
+                                        corporal, se evidencia que presentas sobrepeso. Te recomendamos seguir una dieta
+                                        diseñada específicamente para controlar y reducir tu peso, al mismo tiempo que
+                                        promueve hábitos de vida saludables para mejorar tu bienestar general.</span>
+                                    <span *ngIf="usuario.imc >= 30">De acuerdo a tu índice de masa corporal, se
+                                        determina que tienes obesidad. Es crucial que tomes medidas para cuidar tu
+                                        salud. Te recomendamos seguir una dieta especializada para combatir la obesidad,
+                                        junto con la adopción de un estilo de vida más saludable que incluya actividad
+                                        física regular y cambios en los hábitos alimentarios.</span>
+
+
+                                </div>
+                                <br>
+                            </div>
+                            <br>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
+                            <a routerLink="/editar-usuario/{{usuario.id}}" class="btn btn-verde btn-block">Modificar mi
+                                perfil</a>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <a (click)="confirmarBorrado(usuario.id)" class="btn btn-verde btn-block">
+                                <font color="white">Darse de baja</font>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>

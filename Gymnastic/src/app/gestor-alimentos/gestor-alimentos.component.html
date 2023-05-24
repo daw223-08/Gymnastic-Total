@@ -1,0 +1,150 @@
+<body>
+    <nav class="col-md-3 d-none d-md-block bg-light sidebar">
+        <div class="bg-dark border-right borde-redondo" id="sidebar-wrapper">
+            <div class="sidebar-heading text-center text-light bg-primary py-4 borde-redondo fondo-verde-oscuro">NAVEGA
+                POR LA WEB</div>
+            <div class="list-group list-group-flush">
+                <a routerLink="/" class="list-group-item list-group-item-action bg-dark text-light">
+                    <i class="fas fa-home mr-2"></i>Inicio
+                </a>
+                <a routerLink="/perfil" class="list-group-item list-group-item-action bg-dark text-light">
+                    <i class="fas fa-user mr-2"></i>Perfil
+                </a>
+                <a routerLink="/dietas-predisenadas" class="list-group-item list-group-item-action bg-dark text-light">
+                    <i class="fas fa-book mr-2"></i>Ver Dietas Prediseñadas
+                </a>
+                <a routerLink="/crear-dietas" class="list-group-item list-group-item-action bg-dark text-light">
+                    <i class="fas fa-utensils mr-2"></i>Crear Dietas
+                </a>
+                <a routerLink="/informacion-adicional"
+                    class="list-group-item list-group-item-action bg-dark text-light">
+                    <i class="fas fa-info-circle mr-2"></i>Consultar información adicional
+                </a>
+                <a routerLink="/mis-dietas" class="list-group-item list-group-item-action bg-dark text-light">
+                    <i class="fas fa-chart-bar mr-2"></i>Mis Dietas
+                </a>
+                <a routerLink="/gestor-alimentos" class="list-group-item list-group-item-action bg-dark text-light">
+                    <i class="fas fa-apple-alt mr-2"></i>Gestionar alimentos
+                </a>
+                <a (click)="cerrarSesion()" class="list-group-item list-group-item-action bg-dark text-light">
+                    <i class="fas fa-sign-out-alt mr-2"></i>Cerrar sesión
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="p-5">
+        <div class="row">
+            <div class="card">
+                <div class="card-body">
+                    <div>
+                        <div class="mb-3">
+
+                            <div class="row">
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>Nombre</th>
+                                            <th>Cantidad</th>
+                                            <th>Familia</th>
+                                            <th>Horario de Ingesta</th>
+                                            <th>Día</th>
+                                            <th>KCal</th>
+                                            <th>Acciones</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr
+                                            *ngFor="let alimento of alimentos | paginate: {itemsPerPage: 5, currentPage: page}">
+                                            <td>{{ alimento.nombre }}</td>
+                                            <td>{{ alimento.cantidad }}</td>
+                                            <td>{{ alimento.familia }}</td>
+                                            <td>{{ alimento.horario_ingesta }}</td>
+                                            <td>{{ alimento.dia }}</td>
+                                            <td>{{ alimento.kcal }}</td>
+                                            <td>
+                                                <button class="btn btn-verde btn-sm"
+                                                    routerLink="/editar-alimento/{{alimento.id}}">
+                                                    <i class="fas fa-edit"></i>
+                                                </button>
+                                                <button class="btn btn-danger btn-sm ml-2"
+                                                    (click)="confirmarBorrado(alimento.id, alimento.nombre)">
+                                                    <i class="fas fa-trash"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="centro">
+                                    <pagination-controls (pageChange)="page = $event" previousLabel="Anterior"
+                                        nextLabel="Siguiente"></pagination-controls>
+                                </div>
+                            </div>
+                            <hr class="separador">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h1>Inserta un alimento nuevo</h1>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="nombre" class="form-label">Nombre</label>
+                                    <input [(ngModel)]="alimento.nombre" type="text" class="form-control border-dark"
+                                        id="nombre">
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label for="kcal" class="form-label">Kilocalorías</label>
+                                    <input [(ngModel)]="alimento.kcal" type="text" class="form-control border-dark"
+                                        id="kcal">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="dia" class="form-label">Día de la semana</label>
+                                    <select [(ngModel)]="alimento.dia" class="form-select border-dark" id="dia">
+                                        <option value="Lunes">Lunes</option>
+                                        <option value="Martes">Martes</option>
+                                        <option value="Miercoles">Miercoles</option>
+                                        <option value="Jueves">Jueves</option>
+                                        <option value="Viernes">Viernes</option>
+                                        <option value="Sabado">Sabado</option>
+                                        <option value="Domingo">Domingo</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label for="cantidad" class="form-label">Cantidad</label>
+                                    <input [(ngModel)]="alimento.cantidad" type="text" class="form-control border-dark"
+                                        id="cantidad">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="familia" class="form-label">Familia alimentaria</label>
+                                    <input [(ngModel)]="alimento.familia" type="text" class="form-control border-dark"
+                                        id="familia">
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label for="horario_ingesta" class="form-label">Horario de ingesta </label>
+                                    <select [(ngModel)]="alimento.horario_ingesta" class="form-select border-dark"
+                                        id="horario_ingesta">
+                                        <option value="Desayuno">Desayuno</option>
+                                        <option value="Almuerzo">Almuerzo</option>
+                                        <option value="Comida">Comida</option>
+                                        <option value="Merienda">Merienda</option>
+                                        <option value="Cena">Cena</option>
+                                    </select>
+                                </div>
+                                <div class=" d-grid gap-2 mt-4 col-md-6">
+                                    <button class="btn btn-primary btn-verde" (click)="registrarAlimento()">Insertar
+                                        alimento</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>

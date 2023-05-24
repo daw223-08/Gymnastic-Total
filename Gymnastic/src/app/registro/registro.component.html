@@ -1,0 +1,93 @@
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6 mt-4 mt-5">
+                <div class="card">
+                    <div class="card-body">
+                        <h1 class="centro">REGISTRO</h1>
+                        <div>
+                            <div class="mb-3">
+                                <label for="nombre" class="form-label">Nombre</label>
+                                <input [(ngModel)]="usuario.name" type="text" class="form-control border-dark"
+                                    id="nombre">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input [(ngModel)]="usuario.email" type="email" class="form-control border-dark"
+                                    id="email">
+                            </div>
+
+                            <div class="row">
+
+                                <div class="mb-3 col-md-6">
+                                    <label for="password" class="form-label">Contraseña</label>
+                                    <input [(ngModel)]="usuario.password" type="password"
+                                        class="form-control border-dark" id="password">
+                                </div>
+                                <div class="mb-3 col-md-6">
+                                    <label for="validacion" class="form-label">Repite tu contraseña</label>
+                                    <input [(ngModel)]="validacion" type="password"
+                                        class="form-control border-dark" id="validacion">
+                                </div>
+                            </div>
+
+                            <div><p><i>Si las contraseñas no coinciden no podras registrate</i></p></div>
+
+                            <div class="mb-3">
+                                <label for="telefono" class="form-label">Telefono</label>
+                                <input [(ngModel)]="usuario.telefono" type="text" class="form-control border-dark"
+                                    id="telefono">
+                            </div>
+
+                            <div class="row">
+
+                                <div class="mb-3 col-md-6">
+                                    <label for="edad" class="form-label">Edad</label>
+                                    <input [(ngModel)]="usuario.edad" type="number" class="form-control border-dark"
+                                        id="edad">
+                                </div>
+
+                                <div class="mb-3 col-md-6">
+                                    <label for="peso" class="form-label">Peso</label>
+                                    <input [(ngModel)]="usuario.peso" type="number" class="form-control border-dark"
+                                        id="peso">
+                                </div>
+                            </div>
+
+                            <div class="row">
+
+                                <div class="mb-3 col-md-6">
+                                    <label for="altura" class="form-label">Altura</label>
+                                    <input [(ngModel)]="usuario.altura" type="number" class="form-control border-dark"
+                                        id="altura">
+                                </div>
+
+                                <div class="mb-3 col-md-6">
+                                    <label for="sexo" class="form-label">Sexo</label>
+                                    <select [(ngModel)]="usuario.sexo" class="form-select border-dark" name="sexo"
+                                        id="sexo">
+                                        <option value="m">Masculino</option>
+                                        <option value="f">Femenino</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="mb-3 form-check">
+                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                <label class="form-check-label" for="exampleCheck1">Acepto los terminos y
+                                    condiciones</label>
+                            </div>
+
+                            <div class="d-grid gap-2 mt-4">
+                                <button (click)="registrarUsuario()" *ngIf="usuario.password === validacion" class="btn btn-primary btn-verde">
+                                    Registrarse en Gymnastic
+                                  </button>
+                                <button routerLink="/login" class="btn btn-secondary btn-verde-oscuro">Volver</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

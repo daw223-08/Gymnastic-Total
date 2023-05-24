@@ -1,0 +1,64 @@
+
+
+html, body {
+  height: 100%;
+}
+
+/* Color de fondo de la página */
+  body {
+    background: linear-gradient(45deg, #009929, #98ff96);
+  }
+  
+  /* Color del borde y de fondo de la tarjeta */
+  .card {
+    border-radius: 10px;
+    border-color: black;
+    background-color: #ffffff;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.8);
+  }
+  
+  /* Color de los campos de entrada de texto */
+  .form-control {
+    border-radius: 10px;
+    border-color: black;
+  }
+  
+  /* Color del botón de inicio de sesión */
+  .btn-primary {
+    background-color: #003400;
+    border-color: #003400;
+    color: white;
+  }
+  
+  /* Color del texto en el botón de inicio de sesión */
+  .btn-primary:hover {
+    background-color: #009929;
+    border-color: #009929;
+    color: black;
+  }
+  
+  /* Color de la letra del texto en la tarjeta */
+  .card-title,
+  .card-text {
+    color: #333333;
+  }
+  
+  /* Color de la letra de los enlaces en la tarjeta */
+  .card-link {
+    color: #5ccb5f;
+  }
+  
+  /* Color del borde inferior del enlace de registro */
+  .card-link:last-child {
+    border-bottom: 1px solid #5ccb5f;
+  }
+
+  .cambio-enlace {
+    color: #5ccb5f;
+    text-decoration: none;
+  }
+  
+  .cambio-enlace:hover {
+    color: #057861;
+    text-decoration: none;
+  }

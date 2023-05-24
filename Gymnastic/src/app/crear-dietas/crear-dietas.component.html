@@ -1,0 +1,104 @@
+<body>
+    <nav class="col-md-3 d-none d-md-block bg-light sidebar">
+        <div class="bg-dark border-right borde-redondo" id="sidebar-wrapper">
+            <div class="sidebar-heading text-center text-light bg-primary py-4 borde-redondo fondo-verde-oscuro">NAVEGA
+                POR LA WEB</div>
+            <div class="list-group list-group-flush">
+                <a routerLink="/" class="list-group-item list-group-item-action bg-dark text-light">
+                    <i class="fas fa-home mr-2"></i>Inicio
+                </a>
+                <a routerLink="/perfil" class="list-group-item list-group-item-action bg-dark text-light">
+                    <i class="fas fa-user mr-2"></i>Perfil
+                </a>
+                <a routerLink="/dietas-predisenadas" class="list-group-item list-group-item-action bg-dark text-light">
+                    <i class="fas fa-book mr-2"></i>Ver Dietas Prediseñadas
+                </a>
+                <a routerLink="/crear-dietas" class="list-group-item list-group-item-action bg-dark text-light">
+                    <i class="fas fa-utensils mr-2"></i>Crear Dietas
+                </a>
+                <a routerLink="/informacion-adicional"  class="list-group-item list-group-item-action bg-dark text-light">
+                    <i class="fas fa-info-circle mr-2"></i>Consultar información adicional
+                </a>
+                <a routerLink="/mis-dietas" class="list-group-item list-group-item-action bg-dark text-light">
+                    <i class="fas fa-chart-bar mr-2"></i>Mis Dietas
+                </a>
+                <a routerLink="/gestor-alimentos" class="list-group-item list-group-item-action bg-dark text-light">
+                    <i class="fas fa-apple-alt mr-2"></i>Gestionar alimentos
+                </a>
+                <a (click)="cerrarSesion()" class="list-group-item list-group-item-action bg-dark text-light">
+                    <i class="fas fa-sign-out-alt mr-2"></i>Cerrar sesión
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="p-5">
+        <div class="row">
+            <div class="card">
+                <div class="card-body">
+                    <div>
+                        <div class="mb-3">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h1>Crea tu propia dieta!</h1>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="nombre" class="form-label">Nombre (Podrás modificarlo más
+                                        adelante)</label>
+                                    <input [(ngModel)]="dieta.nombre" type="text" class="form-control border-dark" id="nombre">
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label for="desc" class="form-label">Descripción (Podrás modificarla más
+                                        adelante)</label>
+                                    <textarea [(ngModel)]="dieta.descripcion" class="form-control border-dark" id="desc" rows="1"></textarea>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="tipo" class="form-label">Tipo</label>
+                                    <select [(ngModel)]="dieta.tipo" class="form-select border-dark" id="tipo">
+                                        <option value="Dieta para perder peso">Dieta para perder peso</option>
+                                        <option value="Dieta para ganar peso">Dieta para ganar peso</option>
+                                        <option value="Dieta para definir volumen">Dieta para definir volumen</option>
+                                        <option value="Dieta equilibrada">Dieta equilibrada</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <br>
+                            <hr class="separador">
+                            <br>
+                            <h2>Añade aqui tus alimentos para la dieta</h2>
+                            <br>
+                            <button class="btn-verde" (click)="generarSelect()">Añadir alimento</button>
+                            <div id="contenedor">
+                                <ng-container *ngFor="let select of selects; let i = index">
+                                    <br>
+                                  <select class="form-control" [id]="'select-lunes-' + (contadorSelectId + i)" [(ngModel)]="comidasSeleccionadas[i]">
+                                    <option *ngFor="let alimento of selectAlimento" [value]="alimento.id">
+                                        {{ alimento.nombre }} con una cantidad de {{ alimento.cantidad }}, {{alimento.kcal}} kcal de la familia {{ alimento.familia}}
+                                        para ingerir en el {{alimento.horario_ingesta}} los {{alimento.dia}}
+                                    </option>
+                                  </select>
+                                </ng-container>
+                              </div>                         
+                            <div class="d-grid gap-2 mt-4">
+                                <button class="btn btn-primary btn-verde" (click)="guardarDieta()">Guardar Dieta</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!--<footer class="bg-secondary text-center text-lg-start text-white">
+        <div class="container p-4">
+            <div class="row">
+                <div class="col-lg-12">
+                    <p class="m-0">© 2023 - Desarrollado por Mario Paredes Vela</p>
+                </div>
+            </div>
+        </div>
+    </footer>-->
+</body>

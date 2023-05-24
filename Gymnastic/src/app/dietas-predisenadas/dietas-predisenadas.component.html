@@ -1,0 +1,2530 @@
+<body>
+    <nav class="col-md-3 d-none d-md-block bg-light sidebar">
+        <div class="bg-dark border-right borde-redondo" id="sidebar-wrapper">
+            <div class="sidebar-heading text-center text-light bg-primary py-4 borde-redondo fondo-verde-oscuro">NAVEGA
+                POR LA WEB</div>
+            <div class="list-group list-group-flush">
+                <a routerLink="/" class="list-group-item list-group-item-action bg-dark text-light">
+                    <i class="fas fa-home mr-2"></i>Inicio
+                </a>
+                <a routerLink="/perfil" class="list-group-item list-group-item-action bg-dark text-light">
+                    <i class="fas fa-user mr-2"></i>Perfil
+                </a>
+                <a routerLink="/dietas-predisenadas"  class="list-group-item list-group-item-action bg-dark text-light">
+                    <i class="fas fa-book mr-2"></i>Ver Dietas Prediseñadas
+                </a>
+                <a routerLink="/crear-dietas" class="list-group-item list-group-item-action bg-dark text-light">
+                    <i class="fas fa-utensils mr-2"></i>Crear Dietas
+                </a>
+                <a routerLink="/informacion-adicional"  class="list-group-item list-group-item-action bg-dark text-light">
+                    <i class="fas fa-info-circle mr-2"></i>Consultar información adicional
+                </a>
+                <a routerLink="/mis-dietas" class="list-group-item list-group-item-action bg-dark text-light">
+                    <i class="fas fa-chart-bar mr-2"></i>Mis Dietas
+                </a>
+                <a routerLink="/gestor-alimentos" class="list-group-item list-group-item-action bg-dark text-light">
+                    <i class="fas fa-apple-alt mr-2"></i>Gestionar alimentos
+                </a>
+                <a (click)="cerrarSesion()" class="list-group-item list-group-item-action bg-dark text-light">
+                    <i class="fas fa-sign-out-alt mr-2"></i>Cerrar sesión
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="p-5">
+        
+        <div class="card">
+            <div class="card-body">
+                <h2 class="card-title">Dieta Deportiva</h2>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr class="fondo-verde">
+                            <th class="fondo-blanco"></th>
+                            <th>Nombre</th>
+                            <th>Imagen</th>
+                            <th>Cantidad</th>
+                            <th>Familia</th>
+                            <th>Horario</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th class="fondo-verde">Lunes</th>
+                            <td>
+                                Salmón a las finas hierbas
+                                <hr>
+                                Pieza de fruta
+                                <hr>
+                                Ensalada de pollo con un poco de aceite de oliva
+                                <hr>
+                                Escalopines de ternera
+                                <hr>
+                                Verduritas a la plancha
+                                <hr>
+                                Pieza de fruta
+                            </td>
+                            <td>---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                            </td>
+                            <td>---
+                                <hr>
+                                2 u.
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                1 u.
+                            </td>
+                            <td>Pescado
+                                <hr>
+                                Fruta
+                                <hr>
+                                Otro
+                                <hr>
+                                Carne
+                                <hr>
+                                Verdura
+                                <hr>
+                                Fruta
+                            </td>
+                            <td>Desayuno
+                                <hr>
+                                Desayuno
+                                <hr>
+                                Comida
+                                <hr>
+                                Cena
+                                <hr>
+                                Cena
+                                <hr>
+                                Cena
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="fondo-verde">Martes</th>
+                            <td>
+                                Infusión
+                                <hr>
+                                Lonchas de jamón serrano con tomate
+                                <hr>
+                                Hamburguesas con un poco de salsa
+                                <hr>
+                                Huevos duros con pimientos asados
+                                <hr>
+                                Ensalada de aguacate
+                                <hr>
+                                Pieza de fruta
+                            </td>
+                            <td>---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                            </td>
+                            <td>---
+                                <hr>
+                                5 u.
+                                <hr>
+                                ---
+                                <hr>
+                                2 u.
+                                <hr>
+                                ---
+                                <hr>
+                                7 u.
+                            </td>
+                            <td>Otro
+                                <hr>
+                                Embutido
+                                <hr>
+                                Otro
+                                <hr>
+                                Otro
+                                <hr>
+                                Verdura
+                                <hr>
+                                Fruta
+                            </td>
+                            <td>Desayuno
+                                <hr>
+                                Desayuno
+                                <hr>
+                                Comida
+                                <hr>
+                                Cena
+                                <hr>
+                                Cena
+                                <hr>
+                                Cena
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="fondo-verde">Miercoles</th>
+                            <td>
+                                Infusión
+                                <hr>
+                                Huevos revueltos con bacon
+                                <hr>
+                                Carne con unas verduras frescas
+                                <hr>
+                                Merluza
+                                <hr>
+                                Nueces
+                                <hr>
+                                Pieza de fruta
+                            </td>
+                            <td>---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                            </td>
+                            <td>---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                40 g.
+                                <hr>
+                                2 u.
+                            </td>
+                            <td>Otro
+                                <hr>
+                                Otro
+                                <hr>
+                                Carne y verdura
+                                <hr>
+                                Pescado
+                                <hr>
+                                Frutos secos
+                                <hr>
+                                Fruta
+                            </td>
+                            <td>Desayuno
+                                <hr>
+                                Desayuno
+                                <hr>
+                                Comida
+                                <hr>
+                                Cena
+                                <hr>
+                                Cena
+                                <hr>
+                                Cena
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="fondo-verde">Jueves</th>
+                            <td>
+                                Huevos revueltos
+                                <hr>
+                                Jamón Ibérico
+                                <hr>
+                                Zumo de naranja
+                                <hr>
+                                Variado de verduras
+                                <hr>
+                                Lomo de cerdo
+                                <hr>
+                                Arroz blanco
+                                <hr>
+                                Nueces
+                            </td>
+                            <td>---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                            </td>
+                            <td>---
+                                <hr>
+                                ---
+                                <hr>
+                                1 vaso
+                                <hr>
+                                ---
+                                <hr>
+                                3 filetes
+                                <hr>
+                                ---
+                                <hr>
+                                40 g
+                            </td>
+                            <td>Otro
+                                <hr>
+                                Embutido
+                                <hr>
+                                Fruta
+                                <hr>
+                                Verdura
+                                <hr>
+                                Carne
+                                <hr>
+                                Otro
+                                <hr>
+                                Frutos secos
+                            </td>
+                            <td>Desayuno
+                                <hr>
+                                Desayuno
+                                <hr>
+                                Desayuno
+                                <hr>
+                                Comida
+                                <hr>
+                                Comida
+                                <hr>
+                                Cena
+                                <hr>
+                                Cena
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="fondo-verde">Viernes</th>
+                            <td>
+                                Huevos cocidos
+                                <hr>
+                                Lonchas de pavo
+                                <hr>
+                                Zumo de naranja
+                                <hr>
+                                Variado de verduras
+                                <hr>
+                                Carne de ternera
+                                <hr>
+                                Bacalao a la plancha
+                                <hr>
+                                Nueces
+                            </td>
+                            <td>---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                            </td>
+                            <td>2 u.
+                                <hr>
+                                5 u.
+                                <hr>
+                                1 vaso
+                                <hr>
+                                ---
+                                <hr>
+                                3 filetes
+                                <hr>
+                                ---
+                                <hr>
+                                40 g
+                            </td>
+                            <td>Otro
+                                <hr>
+                                Embutido
+                                <hr>
+                                Fruta
+                                <hr>
+                                Verdura
+                                <hr>
+                                Carne
+                                <hr>
+                                Pescado
+                                <hr>
+                                Frutos secos
+                            </td>
+                            <td>Desayuno
+                                <hr>
+                                Desayuno
+                                <hr>
+                                Desayuno
+                                <hr>
+                                Comida
+                                <hr>
+                                Comida
+                                <hr>
+                                Cena
+                                <hr>
+                                Cena
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="fondo-verde">Sabado</th>
+                            <td>
+                                Huevos revueltos con jamón ibérico
+                                <hr>
+                                Zumo de naranja
+                                <hr>
+                                Champiñones
+                                <hr>
+                                Carne de hamburguesa
+                                <hr>
+                                Langostinos
+                                <hr>
+                                Frutos secos
+                            </td>
+                            <td>---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                            </td>
+                            <td>---
+                                <hr>
+                                1 vaso
+                                <hr>
+                                ---
+                                <hr>
+                                2 filetes
+                                <hr>
+                                5 u.
+                                <hr>
+                                40 g
+                            </td>
+                            <td>Otro
+                                <hr>
+                                Fruta
+                                <hr>
+                                Verdura
+                                <hr>
+                                Carne
+                                <hr>
+                                Pescado
+                                <hr>
+                                Frutos secos
+                            </td>
+                            <td>Desayuno
+                                <hr>
+                                Desayuno
+                                <hr>
+                                Comida
+                                <hr>
+                                Comida
+                                <hr>
+                                Cena
+                                <hr>
+                                Cena
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="fondo-verde">Domingo</th>
+                            <td>
+                                Carne con verduras
+                                <hr>
+                                Emparedado con lechuga
+                                <hr>
+                                Carne con verduras frescas
+                                <hr>
+                                Alas de pollo a la plancha
+                                <hr>
+                                Verduritas salteadas
+                            </td>
+                            <td>---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                            </td>
+                            <td>---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                2 filetes
+                                <hr>
+                                5 u.
+                            </td>
+                            <td>Carne y verdura
+                                <hr>
+                                Otro
+                                <hr>
+                                Carne y verdura
+                                <hr>
+                                Carne
+                                <hr>
+                                Verduras
+                            </td>
+                            <td>Desayuno
+                                <hr>
+                                Comida
+                                <hr>
+                                Comida
+                                <hr>
+                                Cena
+                                <hr>
+                                Cena
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <br><br>
+<div class="card">
+            <div class="card-body">
+                <h2 class="card-title">Dieta Vegatariana</h2>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr class="fondo-verde">
+                            <th class="fondo-blanco"></th>
+                            <th>Nombre</th>
+                            <th>Imagen</th>
+                            <th>Cantidad</th>
+                            <th>Familia</th>
+                            <th>Horario</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th class="fondo-verde">Lunes</th>
+                            <td>
+                                Yogures de soja con dos
+                                cucharaditas con miel de
+                                caña
+                                <hr>
+                                Pieza de fruta
+                                <hr>
+                                Cereales de desayuno integrales, enriquecidos
+                                <hr>
+                                Bocadillo integral con seitán
+                                <hr>
+                                Pasta con verduritas salteadas
+                                <hr>
+                                Hamburguesa vegetal con ensalda verde
+                                <hr>
+                                Pieza de fruta
+                                <hr>
+                                Batido de soja
+                                enriquecido, con 1
+                                cucharada de postre con miel de caña.
+                                <hr>Ensalada de tomate y
+                                nueces
+                                <hr>Brocheta de tofu,
+                                verduras y patata
+                            </td>
+                            <td>---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                            </td>
+                            <td>2 u.
+                                <hr>
+                                120 g
+                                <hr>
+                                2 puñados
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                1 u.
+                                <hr>
+                                1 vaso
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                            </td>
+                            <td>Lacteo
+                                <hr>
+                                Fruta
+                                <hr>
+                                Cereal
+                                <hr>
+                                Otro
+                                <hr>
+                                Otro
+                                <hr>
+                                Otro
+                                <hr>
+                                Fruta
+                                <hr>
+                                Derivado de leguminosas
+                                <hr>
+                                Otro
+                                <hr>
+                                Otro
+                            </td>
+                            <td>Desayuno
+                                <hr>
+                                Desayuno
+                                <hr>
+                                Desayuno
+                                <hr>
+                                Almuerzo
+                                <hr>
+                                Comida
+                                <hr>
+                                Comida
+                                <hr>
+                                Comida
+                                <hr>
+                                Merienda
+                                <hr>
+                                Cena
+                                <hr>
+                                Cena
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="fondo-verde">Martes</th>
+                            <td>
+                                Tostada integral
+                                <hr>
+                                Batido de soja enriquecido con cacao en polvo
+                                <hr>
+                                Pieza de fruta
+                                <hr>
+                                Frutos secos
+                                <hr>
+                                Lentejas especiadas
+                                <hr>
+                                Falafel a la papillote con ensalda de tomate
+                                <hr>
+                                Pieza de fruta
+                                <hr>
+                                Yogur de soja, con dos
+                                cucharadas de postre con miel de caña.                                
+                                <hr>Crema de  calabacin
+                                <hr> Rollitos de primavera
+                                con flan de arroz                                
+                            </td>
+                            <td>---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                            </td>
+                            <td>2 u. de 20g
+                                <hr>
+                                1 vaso
+                                <hr>
+                                2 u.
+                                <hr>
+                                40 g
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                2 u.
+                                <hr>
+                                2 u.
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                            </td>
+                            <td>Derivado del cereal
+                                <hr>
+                                Derivado de leguminosas
+                                <hr>
+                                Fruta
+                                <hr>
+                                Frutos secos
+                                <hr>
+                                Legumbre
+                                <hr>
+                                Otro
+                                <hr>
+                                Fruta
+                                <hr>
+                                Lacteo
+                                <hr>
+                                Verdura
+                                <hr>
+                                Otro
+                            </td>
+                            <td>Desayuno
+                                <hr>
+                                Desayuno
+                                <hr>
+                                Desayuno
+                                <hr>
+                                Almuerzo
+                                <hr>
+                                Comida
+                                <hr>
+                                Comida
+                                <hr>
+                                Comida
+                                <hr>
+                                Merienda
+                                <hr>
+                                Cena
+                                <hr>
+                                Cena
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="fondo-verde">Miercoles</th>
+                            <td>
+                                Yogur de soja, con dos cucharaditas con miel de caña
+                                <hr>
+                                Galletas
+                                <hr>
+                                Pieza de fruta
+                                <hr>
+                                Bocadillo integral con tofu
+                                <hr>
+                                Ensalada de cogollos y palmitos
+                                <hr>
+                                Espaguetis a la boloñesa
+                                <hr>
+                                Pieza de fruta
+                                <hr>
+                                Batido de soja
+                                enriquecido, con 1
+                                cucharada de postre con miel de caña                       
+                                <hr>Vichyssoise
+                                <hr>Coles de Bruselas
+                                salteadas, con guarnición                             
+                            </td>
+                            <td>---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                            </td>
+                            <td>2 u.
+                                <hr>
+                                4 u.
+                                <hr>
+                                1 u.
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                1 u.
+                                <hr>
+                                1 vaso
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                            </td>
+                            <td>Lacteo
+                                <hr>
+                                Derivado del cereal
+                                <hr>
+                                Fruta
+                                <hr>
+                                Legumbre
+                                <hr>
+                                Otro
+                                <hr>
+                                Pasta
+                                <hr>
+                                Fruta
+                                <hr>
+                                Derivado de las leguminosas
+                                <hr>
+                                Otro
+                                <hr>
+                                Otro
+                            </td>
+                            <td>Desayuno
+                                <hr>
+                                Desayuno
+                                <hr>
+                                Desayuno
+                                <hr>
+                                Almuerzo
+                                <hr>
+                                Comida
+                                <hr>
+                                Comida
+                                <hr>
+                                Comida
+                                <hr>
+                                Merienda
+                                <hr>
+                                Cena
+                                <hr>
+                                Cena
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="fondo-verde">Jueves</th>
+                            <td>
+                                Batido de soja
+                                enriquecido (con 1
+                                cucharada de cacao en
+                                polvo) con una cucharada
+                                de postre con miel de
+                                caña.
+                                <hr>
+                                Bocadillo de seitán, con aceite de
+                                oliva (una cucharada)
+                                <hr>
+                                Pieza de fruta
+                                <hr>
+                                Rebanada de pan de molde integral con mermelada
+                                <hr>
+                                Arroz integral con setas
+                                <hr>
+                                Canelones de verduras
+                                <hr>
+                                Pieza de fruta
+                                <hr>
+                                Frutos secos                      
+                                <hr>Gazpacho o zumo de
+                                tomate
+                                <hr>Tostada de pimiento
+                                asado, con níscalos                            
+                            </td>
+                            <td>---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                            </td>
+                            <td>1 bol
+                                <hr>
+                                80 g
+                                <hr>
+                                1 u.
+                                <hr>
+                                2 u.
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                2 u.
+                                <hr>
+                                1 puñado
+                                <hr>
+                                300 g
+                                <hr>
+                                ---
+                            </td>
+                            <td>Derivado de las leguminosas
+                                <hr>
+                                Otro
+                                <hr>
+                                Fruta
+                                <hr>
+                                Derivado del cereal
+                                <hr>
+                                Otro
+                                <hr>
+                                Verdura
+                                <hr>
+                                Fruta
+                                <hr>
+                                Frutos secos
+                                <hr>
+                                Verdura
+                                <hr>
+                                Otro
+                            </td>
+                            <td>Desayuno
+                                <hr>
+                                Desayuno
+                                <hr>
+                                Desayuno
+                                <hr>
+                                Almuerzo
+                                <hr>
+                                Comida
+                                <hr>
+                                Comida
+                                <hr>
+                                Comida
+                                <hr>
+                                Merienda
+                                <hr>
+                                Cena
+                                <hr>
+                                Cena
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="fondo-verde">Viernes</th>
+                            <td>
+                                Biscote integral
+                                <hr>
+                                Pieza de fruta
+                                <hr>
+                                Rebanada de pan de molde integral tostado untado con tomate
+                                <hr>
+                                Guisantes salteados
+                                <hr>
+                                Seitán frito a la menta con patata al horno
+                                <hr>
+                                Pieza de fruta
+                                <hr>
+                                Galletas                    
+                                <hr>Ensalada de arroz
+                                integral
+                                <hr>Tofu con finas hierbas al vino blanco                           
+                            </td>
+                            <td>---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                            </td>
+                            <td>4 de 10 g
+                                <hr>
+                                2 u.
+                                <hr>
+                                2 u.
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                1 u.
+                                <hr>
+                                4 u.
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                            </td>
+                            <td>Derivado del cereal
+                                <hr>
+                                Fruta
+                                <hr>
+                                Derivado del cereal
+                                <hr>
+                                Verdura
+                                <hr>
+                                Otro
+                                <hr>
+                                Fruta
+                                <hr>
+                                Derivado del cereal
+                                <hr>
+                                Otro
+                                <hr>
+                                Otro
+                            </td>
+                            <td>Desayuno
+                                <hr>
+                                Desayuno
+                                <hr>
+                                Almuerzo
+                                <hr>
+                                Comida
+                                <hr>
+                                Comida
+                                <hr>
+                                Comida
+                                <hr>
+                                Merienda
+                                <hr>
+                                Cena
+                                <hr>
+                                Cena
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="fondo-verde">Sabado</th>
+                            <td>
+                                Yogur se soja, con dos
+                                cucharaditas con miel de
+                                caña y trocitos de fruta
+                                <hr>
+                                Panecillo integral con crema de sésamo (Tahini)
+                                <hr>
+                                Parrillada de verduras
+                                <hr>
+                                Paella vegetal
+                                <hr>
+                                Pieza de fruta
+                                <hr>
+                                Infusión con miel de caña                   
+                                <hr>Espaguetis con
+                                alcachofas
+                                <hr>Croquetas de cuscús integral                          
+                            </td>
+                            <td>---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                            </td>
+                            <td>2 u.
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                2 u.
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                            </td>
+                            <td>Lacteo
+                                <hr>
+                                Derivado del cereal
+                                <hr>
+                                Verdura
+                                <hr>
+                                Otro
+                                <hr>
+                                Fruta
+                                <hr>
+                                Otro
+                                <hr>
+                                Pasta
+                                <hr>
+                                Otro
+                            </td>
+                            <td>Desayuno
+                                <hr>
+                                Almuerzo
+                                <hr>
+                                Comida
+                                <hr>
+                                Comida
+                                <hr>
+                                Comida
+                                <hr>
+                                Merienda
+                                <hr>
+                                Cena
+                                <hr>
+                                Cena
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="fondo-verde">Domingo</th>
+                            <td>
+                                Batido de soja enriquecido
+                                <hr>
+                                Cereales de desayuno integrales
+                                <hr>
+                                Pieza de fruta
+                                <hr>
+                                Frutos secos
+                                <hr>
+                                Guacamole
+                                <hr>
+                                Espinacas a la catalana
+                                <hr>
+                                Pieza de fruta
+                                <hr>
+                                Yogur de soja, con una
+                                cucharadita de miel de
+                                caña.                                
+                                <hr>Salteado de setas
+                                <hr>Sopa de tomate
+                            </td>
+                            <td>---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                            </td>
+                            <td>1 vaso
+                                <hr>
+                                60 g
+                                <hr>
+                                2 u.
+                                <hr>
+                                40 g
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                1 u.
+                                <hr>
+                                1 u.
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                            </td>
+                            <td>Derivado de las leguminosas
+                                <hr>
+                                Cereal
+                                <hr>
+                                Fruta
+                                <hr>
+                                Frutos secos
+                                <hr>
+                                Fruta
+                                <hr>
+                                Otro
+                                <hr>
+                                Fruta
+                                <hr>
+                                Lacteo
+                                <hr>
+                                Otro
+                                <hr>
+                                Verdura
+                            </td>
+                            <td>Desayuno
+                                <hr>
+                                Desayuno
+                                <hr>
+                                Desayuno
+                                <hr>
+                                Almuerzo
+                                <hr>
+                                Comida
+                                <hr>
+                                Comida
+                                <hr>
+                                Comida
+                                <hr>
+                                Merienda
+                                <hr>
+                                Cena
+                                <hr>
+                                Cena
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <br><br>
+        <div class="card">
+            <div class="card-body">
+                <h2 class="card-title">Dieta Hipocalórica</h2>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr class="fondo-verde">
+                            <th class="fondo-blanco"></th>
+                            <th>Nombre</th>
+                            <th>Imagen</th>
+                            <th>Cantidad</th>
+                            <th>Familia</th>
+                            <th>Horario</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th class="fondo-verde">Lunes</th>
+                            <td>
+                                Muesli de 7 cereales con leche de avena
+                                <hr>
+                                Pieza de fruta
+                                <hr>
+                                Frutos secos
+                                <hr>
+                                Ensalda mixta con garbanzos
+                                <hr>
+                                Salmón salvaje
+                                <hr>
+                                Chocolate
+                                <hr>
+                                Verdura mediterranea horneada
+                                <hr>
+                                Calabacines
+                            </td>
+                            <td>---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                            </td>
+                            <td>---
+                                <hr>
+                                1 u.
+                                <hr>
+                                40 g
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                10 g.
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                            </td>
+                            <td>Derivado del cereal
+                                <hr>
+                                Fruta
+                                <hr>
+                                Frutos secos
+                                <hr>
+                                Legumbres
+                                <hr>
+                                Pescado
+                                <hr>
+                                Lacteo
+                                <hr>
+                                Verdura
+                                <hr>
+                                Verdura
+                            </td>
+                            <td>Desayuno
+                                <hr>
+                                Desayuno
+                                <hr>
+                                Desayuno
+                                <hr>
+                                Comida
+                                <hr>
+                                Comida
+                                <hr>
+                                Merienda
+                                <hr>
+                                Cena
+                                <hr>
+                                Cena
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="fondo-verde">Martes</th>
+                            <td>
+                                Skyr con 2 cucharadas de copos de avena
+                                <hr>
+                                Pieza de fruta
+                                <hr>
+                                Canónigos con tomate
+                                <hr>
+                                Piñones
+                                <hr>
+                                Queso parmesano
+                                <hr>
+                                Chocolate
+                                <hr>
+                                Verdura asada
+                                <hr>
+                                Filete de pollo con patatas
+                            </td>
+                            <td>---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                            </td>
+                            <td>---
+                                <hr>
+                                5 u.
+                                <hr>
+                                ---
+                                <hr>
+                                40 g
+                                <hr>
+                                ---
+                                <hr>
+                                10 g.
+                                <hr>
+                                ---
+                                <hr>
+                                1 filete
+                            </td>
+                            <td>Lacteo
+                                <hr>
+                                Fruta
+                                <hr>
+                                Otro
+                                <hr>
+                                Frutos secos
+                                <hr>
+                                Lacteo
+                                <hr>
+                                Lacteo
+                                <hr>
+                                Verdura
+                                <hr>
+                                Carne
+                            </td>
+                            <td>Desayuno
+                                <hr>
+                                Desayuno
+                                <hr>
+                                Comida
+                                <hr>
+                                Comida
+                                <hr>
+                                Comida
+                                <hr>
+                                Merienda
+                                <hr>
+                                Cena
+                                <hr>
+                                Cena
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="fondo-verde">Miercoles</th>
+                            <td>
+                                Mezcla de frutas con skyr
+                                <hr>
+                                Tortilla francesa
+                                <hr>
+                                Jamón de Parma
+                                <hr>
+                                Chocolate
+                                <hr>
+                                Tallarines de calabacín con gambas
+                                <hr>
+                                Tomates y espinacas                     
+                            </td>
+                            <td>---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                            </td>
+                            <td>---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>                
+                                10 g
+                                <hr>
+                                ---
+                                <hr>
+                                ---                               
+                            </td>
+                            <td>Lacteo y fruta
+                                <hr>
+                                Otro
+                                <hr>
+                                Embutido
+                                <hr>
+                                Lacteo
+                                <hr>
+                                Verdura
+                                <hr>
+                                Verdura
+                            </td>
+                            <td>Desayuno
+                                <hr>
+                                Comida
+                                <hr>
+                                Comida
+                                <hr>
+                                Merienda
+                                <hr>
+                                Cena
+                                <hr>
+                                Cena
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="fondo-verde">Jueves</th>
+                            <td>
+                                Smoothie
+                                <hr>
+                                Tallarines de calabacín con gambas
+                                <hr>
+                                Tomates y espinacas 
+                                <hr>
+                                Chocolate
+                                <hr>
+                                Macarrones de lentejas
+                                <hr>
+                                Pesto                   
+                            </td>
+                            <td>---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                            </td>
+                            <td>---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>                
+                                10 g
+                                <hr>
+                                ---
+                                <hr>
+                                ---                               
+                            </td>
+                            <td>Lacteo
+                                <hr>
+                                Verdura
+                                <hr>
+                                Verdura
+                                <hr>
+                                Lacteo
+                                <hr>
+                                Legumbre
+                                <hr>
+                                Otro
+                            </td>
+                            <td>Desayuno
+                                <hr>
+                                Comida
+                                <hr>
+                                Comida
+                                <hr>
+                                Merienda
+                                <hr>
+                                Cena
+                                <hr>
+                                Cena
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="fondo-verde">Viernes</th>
+                            <td>
+                                Tortilla francesa
+                                <hr>
+                                Espinacas y feta
+                                <hr>
+                                Filete de ternera
+                                <hr>
+                                Judías verdes
+                                <hr>
+                                Chocolate
+                                <hr>
+                                Verdura salteada
+                                <hr>
+                                Filete de panga                   
+                            </td>
+                            <td>---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                            </td>
+                            <td>---
+                                <hr>
+                                ---
+                                <hr>
+                                1 filete
+                                <hr>                
+                                ---
+                                <hr>
+                                10 g
+                                <hr>
+                                ---  
+                                <hr>
+                                1 filete                              
+                            </td>
+                            <td>Otro
+                                <hr>
+                                Verdura
+                                <hr>
+                                Carne
+                                <hr>
+                                Verdura
+                                <hr>
+                                Lacteo
+                                <hr>
+                                Verdura
+                                <hr>
+                                Carne
+                            </td>
+                            <td>Desayuno
+                                <hr>
+                                Desayuno
+                                <hr>
+                                Comida
+                                <hr>
+                                Comida
+                                <hr>
+                                Merienda
+                                <hr>
+                                Cena
+                                <hr>
+                                Cena
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="fondo-verde">Sabado</th>
+                            <td>
+                                Huevos revueltos
+                                <hr>
+                                Jamón magro ahumado y tomate
+                                <hr>
+                                Pan de proteína
+                                <hr>
+                                Humus
+                                <hr>
+                                Chocolate
+                                <hr>
+                                Pasta integral con salsa de tomate
+                                <hr>
+                                Carne picada vegana                   
+                            </td>
+                            <td>---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                            </td>
+                            <td>---
+                                <hr>
+                                3 lonchas
+                                <hr>
+                                ---
+                                <hr>                
+                                ---
+                                <hr>
+                                10 g
+                                <hr>
+                                ---  
+                                <hr>
+                                1 filete                              
+                            </td>
+                            <td>Otro
+                                <hr>
+                                Embutido
+                                <hr>
+                                Derivado del cereal
+                                <hr>
+                                Aderezo
+                                <hr>
+                                Lacteo
+                                <hr>
+                                Pasta
+                                <hr>
+                                Verdura
+                            </td>
+                            <td>Desayuno
+                                <hr>
+                                Desayuno
+                                <hr>
+                                Comida
+                                <hr>
+                                Comida
+                                <hr>
+                                Merienda
+                                <hr>
+                                Cena
+                                <hr>
+                                Cena
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="fondo-verde">Domingo</th>
+                            <td>
+                                Muesly de 7 cereales con leche de avena
+                                <hr>
+                                Pieza de fruta
+                                <hr>
+                                Frutos secos
+                                <hr>
+                                Salteado de verduras con gambas
+                                <hr>
+                                Chocolate
+                                <hr>
+                                Ensalda de pasta de garbanzos
+                                <hr>
+                                Espinacas, guisantes y pesto                
+                            </td>
+                            <td>---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                            </td>
+                            <td>---
+                                <hr>
+                                1 u.
+                                <hr>
+                                40 g
+                                <hr>                
+                                ---
+                                <hr>
+                                10 g
+                                <hr>
+                                ---  
+                                <hr>
+                                ---                           
+                            </td>
+                            <td>Otro
+                                <hr>
+                                Fruta
+                                <hr>
+                                Frutos secos
+                                <hr>
+                                Verduras y pescado
+                                <hr>
+                                Lacteo
+                                <hr>
+                                Pasta
+                                <hr>
+                                Verdura
+                            </td>
+                            <td>Desayuno
+                                <hr>
+                                Desayuno
+                                <hr>
+                                Desayuno
+                                <hr>
+                                Comida
+                                <hr>
+                                Merienda
+                                <hr>
+                                Cena
+                                <hr>
+                                Cena
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <br><br>
+        <div class="card">
+            <div class="card-body">
+                <h2 class="card-title">Dieta Mediterranea</h2>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr class="fondo-verde">
+                            <th class="fondo-blanco"></th>
+                            <th>Nombre</th>
+                            <th>Imagen</th>
+                            <th>Cantidad</th>
+                            <th>Familia</th>
+                            <th>Horario</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th class="fondo-verde">Lunes</th>
+                            <td>
+                                Zumo de naranja
+                                <hr>
+                                Tostada integral con miel
+                                <hr>
+                                Pieza de fruta
+                                <hr>
+                                Yogurt desnatado con frutas del bosque
+                                <hr>
+                                Judías verdes estofadas
+                                <hr>
+                                Filete de pavo a la plancha con brócoli
+                                <hr>
+                                Flan de leche bajo en azucar
+                                <hr>
+                                Macedonia de frutas
+                                <hr>
+                                Berenjenas al horno
+                                <hr>
+                                Dorada a la plancha
+                            </td>
+                            <td>---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                            </td>
+                            <td>1 vaso
+                                <hr>
+                                2 u.
+                                <hr>
+                                1 u.
+                                <hr>
+                                1 u.
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                1 u.
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                            </td>
+                            <td>Fruta
+                                <hr>
+                                Derivado del cereal
+                                <hr>
+                                Fruta
+                                <hr>
+                                Lacteo
+                                <hr>
+                                Verdura
+                                <hr>
+                                Carne
+                                <hr>
+                                Lacteo
+                                <hr>
+                                Fruta
+                                <hr>
+                                Verdura
+                                <hr>
+                                Pescado
+                            </td>
+                            <td>Desayuno
+                                <hr>
+                                Desayuno
+                                <hr>
+                                Desayuno
+                                <hr>
+                                Almuerzo
+                                <hr>
+                                Comida
+                                <hr>
+                                Comida
+                                <hr>
+                                Comida
+                                <hr>
+                                Merienda
+                                <hr>
+                                Cena
+                                <hr>
+                                Cena
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="fondo-verde">Martes</th>
+                            <td>
+                                Leche de avena
+                                <hr>
+                                Tostada integral con queso
+                                <hr>
+                                Pieza de fruta
+                                <hr>
+                                Bocadillo de pan integral con pavo, tomate y lechuga
+                                <hr>
+                                Sopa de tomate
+                                <hr>
+                                Albóndigas de merluza guisadas con patata
+                                <hr>
+                                Tarta de zanahoria baja en azucar
+                                <hr>
+                                Yogurt denatado con frutos secos
+                                <hr>
+                                Pollo al horno con champiñones y setas varias
+                                <hr>
+                                Ensalada de verdurtas al vapor
+                            </td>
+                            <td>---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                            </td>
+                            <td>1 vaso
+                                <hr>
+                                2 u.
+                                <hr>
+                                1 u.
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                1 u.
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                            </td>
+                            <td>Lacteo
+                                <hr>
+                                Derivado del cereal
+                                <hr>
+                                Fruta
+                                <hr>
+                                Otro
+                                <hr>
+                                Verdura
+                                <hr>
+                                Pescado
+                                <hr>
+                                Otro
+                                <hr>
+                                Lacteo
+                                <hr>
+                                Carne
+                                <hr>
+                                Verdura
+                            </td>
+                            <td>Desayuno
+                                <hr>
+                                Desayuno
+                                <hr>
+                                Desayuno
+                                <hr>
+                                Almuerzo
+                                <hr>
+                                Comida
+                                <hr>
+                                Comida
+                                <hr>
+                                Comida
+                                <hr>
+                                Merienda
+                                <hr>
+                                Cena
+                                <hr>
+                                Cena
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="fondo-verde">Miércoles</th>
+                            <td>
+                                Zumo de melocotón
+                                <hr>
+                                Galletas integrales
+                                <hr>
+                                Pieza de fruta
+                                <hr>
+                                Tostada integral con aceite de oliva y pavo
+                                <hr>
+                                Lentejas con verduras
+                                <hr>
+                                Macarronnes con tomate y queso
+                                <hr>
+                                Natilla de chocolate baja en azúcar
+                                <hr>
+                                Bocadillo de mantequilla de cacahuetes sin azúcar
+                                <hr>
+                                Lubina a la plancha
+                                <hr>
+                                Calabacín a la plancha
+                            </td>
+                            <td>---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                            </td>
+                            <td>1 vaso
+                                <hr>
+                                4 u.
+                                <hr>
+                                1 u.
+                                <hr>
+                                1 u.
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                1 u.
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                            </td>
+                            <td>Fruta
+                                <hr>
+                                Derivado del cereal
+                                <hr>
+                                Fruta
+                                <hr>
+                                Otro
+                                <hr>
+                                Legumbre
+                                <hr>
+                                Pasta
+                                <hr>
+                                Lacteo
+                                <hr>
+                                Otro
+                                <hr>
+                                Pescado
+                                <hr>
+                                Verdura
+                            </td>
+                            <td>Desayuno
+                                <hr>
+                                Desayuno
+                                <hr>
+                                Desayuno
+                                <hr>
+                                Almuerzo
+                                <hr>
+                                Comida
+                                <hr>
+                                Comida
+                                <hr>
+                                Comida
+                                <hr>
+                                Merienda
+                                <hr>
+                                Cena
+                                <hr>
+                                Cena
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="fondo-verde">Jueves</th>
+                            <td>
+                                Leche desnatada con cereales integrales
+                                <hr>
+                                Pieza de fruta
+                                <hr>
+                                Yogurt desnatado con frutos secos
+                                <hr>
+                                Crema de calabacin con orégano y pimienta
+                                <hr>
+                                Magro de cerdo con champiñones
+                                <hr>
+                                Plátano flameado con cacao
+                                <hr>
+                                Pieza de fruta
+                                <hr>
+                                Tostada integral con miel
+                                <hr>
+                                Pizza mediterránea
+                            </td>
+                            <td>---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                            </td>
+                            <td>1 bol
+                                <hr>
+                                1 u.
+                                <hr>
+                                1 u.
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                1 u.
+                                <hr>
+                                1 u.
+                                <hr>
+                                1 u.
+                                <hr>
+                                1 u.
+                            </td>
+                            <td>Lacteo y cereal
+                                <hr>
+                                Fruta
+                                <hr>
+                                Lacteo
+                                <hr>
+                                Verdura
+                                <hr>
+                                Otro
+                                <hr>
+                                Fruta y lacteo
+                                <hr>
+                                Fruta
+                                <hr>
+                                Derivado del cereal
+                                <hr>
+                                Otro
+                            </td>
+                            <td>Desayuno
+                                <hr>
+                                Desayuno
+                                <hr>
+                                Almuerzo
+                                <hr>
+                                Comida
+                                <hr>
+                                Comida
+                                <hr>
+                                Comida
+                                <hr>
+                                Merienda
+                                <hr>
+                                Merienda
+                                <hr>
+                                Cena
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="fondo-verde">Viernes</th>
+                            <td>
+                                Zumo de naranja
+                                <hr>
+                                Tostadas integrales con aceite de oliva
+                                <hr>
+                                Pieza de fruta
+                                <hr>
+                                Barrita de cerales
+                                <hr>
+                                Salteado de garbanzos con guisantes, cebolla y tomate
+                                <hr>
+                                Atún a la plancha
+                                <hr>
+                                Arroz con leche bajo en azucar
+                                <hr>
+                                Bocadillo de fiambre y queso fresco
+                                <hr>
+                                Tortilla de pimiento y cebolla
+                                <hr>
+                                Ensalada de endibias y pepino
+                            </td>
+                            <td>---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                            </td>
+                            <td>1 vaso
+                                <hr>
+                                2 u.
+                                <hr>
+                                1 u.
+                                <hr>
+                                1 u.
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                            </td>
+                            <td>Fruta
+                                <hr>
+                                Derivado del cereal
+                                <hr>
+                                Fruta
+                                <hr>
+                                Derivado del cereal
+                                <hr>
+                                Verdura
+                                <hr>
+                                Pescado
+                                <hr>
+                                Otro
+                                <hr>
+                                Embutido
+                                <hr>
+                                Otro
+                                <hr>
+                                Otro
+                            </td>
+                            <td>Desayuno
+                                <hr>
+                                Desayuno
+                                <hr>
+                                Desayuno
+                                <hr>
+                                Almuerzo
+                                <hr>
+                                Comida
+                                <hr>
+                                Comida
+                                <hr>
+                                Comida
+                                <hr>
+                                Merienda
+                                <hr>
+                                Cena
+                                <hr>
+                                Cena
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="fondo-verde">Sabado</th>
+                            <td>
+                                Yogurt desnatado
+                                <hr>
+                                Magdalenas integrales con miel
+                                <hr>
+                                Macedonia de frutas
+                                <hr>
+                                Leche desnatada con salvado de avena
+                                <hr>
+                                Sopa de marisco
+                                <hr>
+                                Paella mixta
+                                <hr>
+                                Tarta de almendras baja en azúcar
+                                <hr>
+                                Tostada con mermelada baja en azucar
+                                <hr>
+                                Acelgas rehogadas con ajos tiernos
+                                <hr>
+                                Pollo a la plancha
+                            </td>
+                            <td>---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                            </td>
+                            <td>1 u.
+                                <hr>
+                                4 u.
+                                <hr>
+                                ---
+                                <hr>
+                                1 vaso
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                1 u.
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                            </td>
+                            <td>Lacteo
+                                <hr>
+                                Otro
+                                <hr>
+                                Fruta
+                                <hr>
+                                Lacteo
+                                <hr>
+                                Pescado
+                                <hr>
+                                Otro
+                                <hr>
+                                Otro
+                                <hr>
+                                Derivado del cereal
+                                <hr>
+                                Verdura
+                                <hr>
+                                Carne
+                            </td>
+                            <td>Desayuno
+                                <hr>
+                                Desayuno
+                                <hr>
+                                Desayuno
+                                <hr>
+                                Almuerzo
+                                <hr>
+                                Comida
+                                <hr>
+                                Comida
+                                <hr>
+                                Comida
+                                <hr>
+                                Merienda
+                                <hr>
+                                Cena
+                                <hr>
+                                Cena
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="fondo-verde">Domingo</th>
+                            <td>
+                                Leche desnatada
+                                <hr>
+                                Tostadas integrales con aceite de oliva
+                                <hr>
+                                Pieza de fruta
+                                <hr>
+                                Yogurt desnatado
+                                <hr>
+                                Ensalada mixta
+                                <hr>
+                                Lasaña de espinacas
+                                <hr>
+                                Pudín bajo en azucar
+                                <hr>
+                                Batido de cacao
+                                <hr>
+                                Crema de zanahoria y calabaza
+                                <hr>
+                                Caballa a la plancha
+                            </td>
+                            <td>---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                            </td>
+                            <td>1 vaso
+                                <hr>
+                                2 u.
+                                <hr>
+                                1 u.
+                                <hr>
+                                1 u.
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                                <hr>
+                                1 vaso
+                                <hr>
+                                ---
+                                <hr>
+                                ---
+                            </td>
+                            <td>Lacteo
+                                <hr>
+                                Derivado del cereal
+                                <hr>
+                                Fruta
+                                <hr>
+                                Lacteo
+                                <hr>
+                                Otro
+                                <hr>
+                                Verdura
+                                <hr>
+                                Otro
+                                <hr>
+                                Lacteo
+                                <hr>
+                                Verdura
+                                <hr>
+                                Pescado
+                            </td>
+                            <td>Desayuno
+                                <hr>
+                                Desayuno
+                                <hr>
+                                Desayuno
+                                <hr>
+                                Almuerzo
+                                <hr>
+                                Comida
+                                <hr>
+                                Comida
+                                <hr>
+                                Comida
+                                <hr>
+                                Merienda
+                                <hr>
+                                Cena
+                                <hr>
+                                Cena
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-secondary text-center text-lg-start text-white">
+        <div class="container p-4">
+            <div class="row">
+                <div class="col-lg-12">
+                    <p class="m-0">© 2023 - Desarrollado por Mario Paredes Vela</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>

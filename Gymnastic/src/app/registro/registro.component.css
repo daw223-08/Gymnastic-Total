@@ -1,0 +1,31 @@
+body {
+    background-color: #98ff96;
+    height: 100vh;
+}
+
+.card {
+    border-radius: 10px;
+    border-color: black;
+    background-color: #ffffff;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.8);
+}
+
+.btn-verde {
+    background-color: #009929;
+    color: white;
+    border: #009929;
+}
+
+.btn-verde:hover{
+    background-color: #5ccb5f;
+    color: white;
+}
+
+.btn-verde-oscuro {
+    background-color: #003400;
+    color: white;
+}
+
+.centro{
+    text-align: center;
+  }

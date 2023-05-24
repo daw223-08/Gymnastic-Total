@@ -1,0 +1,223 @@
+body {
+    background-color: #98ff96;
+    height: 100vh;
+}
+
+body {
+    background-color: #98ff96;
+    height: 100vh;
+}
+
+.sidebar {
+    background-color: #98ff96 !important;
+    width: 400px;
+    height: calc(100% - 56px);
+    position: fixed;
+    overflow-x: hidden;
+    padding-top: 47px;
+}
+
+.sidebar a {
+    background-color: #ffffff !important;
+    display: block;
+    padding: 34px;
+    text-decoration: none;
+    color: black !important;
+}
+
+.list-group {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.6);
+}
+
+.borde-redondo {
+    border-radius: 10px 10px 0px 0px;
+}
+
+
+.sidebar a:hover {
+    background-color: #009929 !important;
+    color: white !important;
+}
+
+.sidebar .active {
+    background-color: #6c757d;
+    color: white;
+}
+
+/* Estilos para las tarjetas */
+.card {
+    height: 100%;
+    width: 100%;
+    border: none;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.p-10 {
+    padding: 10px;
+}
+
+.mr-2{
+    margin-right: 2%;
+}
+
+.custom-card {
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilos para el footer */
+footer {
+    background-color: #e5e9ee !important;
+    color: black !important;
+    text-align: center;
+    padding: 0.1rem;
+    font-size: 0.8rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 30px;
+}
+
+main {
+    margin-left: 400px;
+    /* ancho del menú lateral */
+    padding: 20px;
+}
+
+.btn-verde {
+    background-color: #009929;
+    color: white;
+}
+
+.btn-verde:hover {
+    background-color: #003400;
+    color: white;
+}
+
+.fondo-verde-oscuro {
+    background-color: #003d00 !important;
+    color: white;
+}
+
+/*-------HEADER-------*/
+
+.btn i {
+    color: black;
+}
+
+.btn {
+    border-color: #009929;
+}
+
+.btn:hover {
+    background-color: #003d00;
+    border-color: #00b894;
+}
+
+.btn:hover i {
+    color: white;
+}
+
+header {
+    background-color: #00b894;
+}
+
+
+.profile {
+    margin-top: 50px;
+}
+
+.profile .avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.profile-info {
+    flex: 1;
+}
+
+.profile-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 20px;
+}
+
+.detail-column {
+    flex-basis: 30%;
+}
+
+.detail-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.detail-row label {
+    width: 120px;
+    font-weight: bold;
+}
+
+.detail-row span {
+    border-bottom: 1px solid green;
+    padding-bottom: 2px;
+}
+
+.btn-primary {
+    margin-top: 20px;
+}
+
+.imagen {
+    text-align: center;
+    max-height: 350px;
+}
+
+.centro{
+    text-align: center;
+}
+
+.separador {
+    border: none;
+    height: 3px;
+    background-color: green;
+  }

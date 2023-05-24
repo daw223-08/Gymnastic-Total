@@ -1,0 +1,57 @@
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6 mt-4">
+                <div class="card mt-5">
+                    <div class="card-body">
+                        <div class="text-center mb-4">
+                            <h1>EDITAR DIETA</h1>
+                        </div>
+                        <div>
+                            <div class="mb-3">
+                                <label for="nombre" class="form-label">Nombre</label>
+                                <input [(ngModel)]="dieta.nombre" type="text" class="form-control border-dark"
+                                    id="nombre">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="tipo" class="form-label">Tipo</label>
+                                <label for="tipo" class="form-label">Tipo</label>
+                                <select [(ngModel)]="dieta.tipo" class="form-select border-dark" id="tipo">
+                                    <option value="Dieta para perder peso">Dieta para perder peso</option>
+                                    <option value="Dieta para ganar peso">Dieta para ganar peso</option>
+                                    <option value="Dieta para definir volumen">Dieta para definir volumen</option>
+                                    <option value="Dieta equilibrada">Dieta equilibrada</option>
+                                </select>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="desc" class="form-label">Descripción (Podrás modificarla más
+                                    adelante)</label>
+                                <textarea [(ngModel)]="dieta.descripcion" class="form-control border-dark" id="desc" rows="3"></textarea>
+                            </div>
+
+                            <div id="contenedor">
+                                <ng-container *ngFor="let select of selects; let i = index">
+                                    <br>
+                                  <select style="font-size: 13px;" class="form-control" [id]="'select-lunes-' + (contadorSelectId + i)" [(ngModel)]="comidasSeleccionadas[i]">
+                                    <option *ngFor="let alimento of selectAlimento" [value]="alimento.id">
+                                        {{ alimento.nombre }} con una cantidad de {{ alimento.cantidad }}, {{alimento.kcal}} kcal de la familia {{ alimento.familia}}
+                                        para ingerir en el {{alimento.horario_ingesta}} los {{alimento.dia}}
+                                    </option>
+                                  </select>
+                                </ng-container>
+                              </div>
+                              <br>
+                              <button class="btn-verde" (click)="generarSelect()">Añadir alimento</button>
+                            <div class="d-grid gap-2 mt-4">
+                                <button (click)="actualizarDieta()" class="btn btn-primary btn-verde">Editar</button>
+                                <button routerLink="/mis-dietas" class="btn btn-secondary btn-verde-oscuro">Volver</button>
+                            </div>                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

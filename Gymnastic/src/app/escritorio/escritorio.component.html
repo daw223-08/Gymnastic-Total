@@ -1,0 +1,91 @@
+<body>
+    <nav class="col-md-3 d-none d-md-block bg-light sidebar">
+        <div class="bg-dark border-right borde-redondo" id="sidebar-wrapper">
+            <div class="sidebar-heading text-center text-light bg-primary py-4 borde-redondo fondo-verde-oscuro">NAVEGA POR LA WEB</div>
+            <div class="list-group list-group-flush">
+                <a routerLink="/" class="list-group-item list-group-item-action bg-dark text-light">
+                    <i class="fas fa-home mr-2"></i>Inicio
+                </a>
+                <a routerLink="/perfil" class="list-group-item list-group-item-action bg-dark text-light">
+                    <i class="fas fa-user mr-2"></i>Perfil
+                </a>
+                <a routerLink="/dietas-predisenadas" class="list-group-item list-group-item-action bg-dark text-light">
+                    <i class="fas fa-book mr-2"></i>Ver Dietas Prediseñadas
+                </a>
+                <a routerLink="/crear-dietas" class="list-group-item list-group-item-action bg-dark text-light">
+                    <i class="fas fa-utensils mr-2"></i>Crear Dietas
+                </a>
+                <a routerLink="/informacion-adicional" class="list-group-item list-group-item-action bg-dark text-light">
+                    <i class="fas fa-info-circle mr-2"></i>Consultar información adicional
+                </a>
+                <a routerLink="/mis-dietas" class="list-group-item list-group-item-action bg-dark text-light">
+                    <i class="fas fa-chart-bar mr-2"></i>Mis Dietas
+                </a>
+                <a routerLink="/gestor-alimentos" class="list-group-item list-group-item-action bg-dark text-light">
+                    <i class="fas fa-apple-alt mr-2"></i>Gestionar alimentos
+                </a>
+                <a (click)="cerrarSesion()" class="list-group-item list-group-item-action bg-dark text-light">
+                    <i class="fas fa-sign-out-alt mr-2"></i>Cerrar sesión
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="p-5">
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <div class="custom-card h-100 text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">Ver dietas</h5>
+                        <p class="card-text">Accede a una selección de dietas prediseñadas o las tuyas propias</p>
+                        <a routerLink="/dietas-predisenadas" class="btn btn-verde">Prediseñadas</a>
+                        <a routerLink="/mis-dietas" class="btn btn-verde ml-5">Mis dietas</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="custom-card h-100 text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">Crear dietas</h5>
+                        <p class="card-text">Crea tus propias dietas personalizadas y adapta la alimentación a tus
+                            necesidades.</p>
+                        <a routerLink="/crear-dietas" class="btn btn-verde">Ver más</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="custom-card h-100 text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">Consultar información adicional</h5>
+                        <p class="card-text">Encuentra aquí información adicional sobre nutrición y alimentación
+                            saludable por si tienes alguna duda.</p>
+                        <a routerLink="/informacion-adicional" class="btn btn-verde">Ver más</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="custom-card h-100 text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">Añade tu alimentación</h5>
+                        <p class="card-text">Añade alimentos para poder crear dietas con ellos</p>
+                        <a routerLink="/gestor-alimentos" class="btn btn-verde">Ver más</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <img src="assets/img/imagen-escritorio.jpg" height="405px">
+        </div>
+    </main>
+
+    <footer class="bg-secondary text-center text-lg-start text-white">
+        <div class="container p-4">
+            <div class="row">
+                <div class="col-lg-12">
+                    <p class="mt--2">© 2023 - Desarrollado por Mario Paredes Vela</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
